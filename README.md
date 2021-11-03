@@ -1,9 +1,9 @@
-# :package_description
+# Weight conversions in PHP
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3ATests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/spatie/weight-conversions)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/weight-conversions/run-tests?label=tests)](https://github.com/spatie/weight-conversions/actions?query=workflow%3ATests+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/spatie/weight-conversions/Check%20&%20fix%20styling?label=code%20style)](https://github.com/spatie/weight-conversions/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/spatie/weight-conversions)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -12,14 +12,14 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require spatie/weight-conversions
 ```
 
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$skeleton = new Spatie\WeightConversions();
+echo $skeleton->echoPhrase('Hello, Spatie!');
 ```
 
 ## Testing
@@ -42,7 +42,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
 ## License
