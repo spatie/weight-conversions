@@ -8,8 +8,6 @@ class Weight
 
     public static function kilograms(float $kilograms): self
     {
-        $myArray = ['1', '2', '3'];
-
         return new static($kilograms);
     }
 
