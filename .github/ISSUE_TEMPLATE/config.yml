@@ -6,3 +6,6 @@ contact_links:
     - name: Request a feature
       url: https://github.com/spatie/weight-conversions/discussions/new?category=ideas
       about: Share ideas for new features
+    - name: Report a bug
+      url: https://github.com/spatie/weight-conversions/issues/new
+      about: Report a reproducable bug
