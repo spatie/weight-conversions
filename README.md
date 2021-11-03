@@ -1,8 +1,7 @@
 # Weight conversions in PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/spatie/weight-conversions)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/weight-conversions/run-tests?label=tests)](https://github.com/spatie/weight-conversions/actions?query=workflow%3ATests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/spatie/weight-conversions/Check%20&%20fix%20styling?label=code%20style)](https://github.com/spatie/weight-conversions/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Tests](https://github.com/spatie/weight-conversions/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/spatie/weight-conversions/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/spatie/weight-conversions)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
