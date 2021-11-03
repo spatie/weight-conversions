@@ -1,13 +1,15 @@
 <?php
 
 namespace Spatie\WeightConversions;
+use PHPUnit\Util\Exception;
 
 class Weight
 {
     protected float $kilograms;
 
-    public static function kilograms(float $kilograms): self
-    {
+    public static function kilograms(float $kilograms): self{
+
+        $myArray= array('1', '2', '3');
         return new static($kilograms);
     }
 
