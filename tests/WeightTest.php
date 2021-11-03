@@ -9,7 +9,7 @@ it('can convert kilograms to pounds correctly', function () {
 });
 
 it('can convert kilograms to stones correctly', function () {
-    $pounds = Weight::kilograms(100)->toStones();
+    $stones = Weight::kilograms(100)->toStones();
 
-    expect($pounds)->toEqual(15.747);
+    expect($stones)->toEqual(15.747);
 });
