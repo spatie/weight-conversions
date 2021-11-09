@@ -2,18 +2,6 @@
 
 All notable changes to `weight-conversions` will be documented in this file.
 
-## 1.1.2 - 2021-11-09
-
-## Added
-
-Nothing this is a test release
-
-**Full Changelog**: https://github.com/spatie/weight-conversions/compare/1.1.1...1.1.2
-
-## 1.1.1 - 2021-11-09
-
-- test release
-
 ## 1.1.0 - 2021-11-03
 
 - add `toStones`
