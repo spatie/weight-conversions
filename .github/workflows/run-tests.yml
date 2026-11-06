@@ -13,9 +13,9 @@ jobs:
         stability: [prefer-lowest, prefer-stable]
         include:
           - php: '8.5'
-            pest: '^5.3'
+            pest: '~5.3'
           - php: '8.6'
-            pest: '^5.3'
+            pest: '~5.3'
 
     name: P${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
@@ -36,7 +36,7 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Install dependencies
-        run: composer update --with "pestphp/pest:${{ matrix.pest || '^1.20' }}" --${{ matrix.stability }} --prefer-dist --no-interaction
+        run: composer update --with "pestphp/pest:${{ matrix.pest || '~1.20' }}" --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Show runtime and test tools
         run: |
@@ -45,9 +45,9 @@ jobs:
           composer show phpunit/phpunit
 
       - name: Execute tests
-        if: matrix.pest != '^5.3'
+        if: matrix.pest != '~5.3'
         run: vendor/bin/pest
 
       - name: Execute tests with modern PHPUnit
-        if: matrix.pest == '^5.3'
+        if: matrix.pest == '~5.3'
         run: vendor/bin/pest --configuration phpunit-modern.xml.dist --no-coverage --display-deprecations --display-notices --display-warnings
