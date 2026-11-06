@@ -6,17 +6,22 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        php: [7.4, 8.0, 8.1]
+        php: ['7.4', '8.0', '8.1', '8.5', '8.6']
         stability: [prefer-lowest, prefer-stable]
+        include:
+          - php: '8.5'
+            pest: '~5.3'
+          - php: '8.6'
+            pest: '~5.3'
 
     name: P${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -31,7 +36,18 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Install dependencies
-        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+        run: composer update --with "pestphp/pest:${{ matrix.pest || '~1.20' }}" --${{ matrix.stability }} --prefer-dist --no-interaction
+
+      - name: Show runtime and test tools
+        run: |
+          php --version
+          composer show pestphp/pest
+          composer show phpunit/phpunit
 
       - name: Execute tests
+        if: matrix.pest != '~5.3'
         run: vendor/bin/pest
+
+      - name: Execute tests with modern PHPUnit
+        if: matrix.pest == '~5.3'
+        run: vendor/bin/pest --configuration phpunit-modern.xml.dist --no-coverage --display-deprecations --display-notices --display-warnings
